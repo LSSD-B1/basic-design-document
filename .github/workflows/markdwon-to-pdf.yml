@@ -2,15 +2,74 @@ name: '📝 Generate PDF from Markdown'
 
 on:
   workflow_dispatch:
+    inputs:
+      source-directory:
+        default: './docs'
+        type: string
+      output-directory:
+        default: './dist'
+        type: string
+
+  workflow_call:
+    inputs:
+      source-directory:
+        default: './docs'
+        type: string
+      output-directory:
+        default: './dist'
+        type: string
+      is-nest:
+        default: false
+        type: boolean
 
   push:
     paths:
+      - '.github/workflows/GeneratePDF.yaml'
+      - '.md-pdf/**'
       - 'docs/**'
+
+env:
+  TZ: Asia/Tokyo
+  SOURCE_DIRECTORY: ${{ inputs.source-directory || './docs' }}
+  OUTPUT_DIRECTORY: ${{ inputs.output-directory || './dist' }}
+  NESTED_OUTPUT_DIRECTORY: ${{ inputs.output-directory || './dist' }}${{ inputs.is-nest && '/**' }}
 
 jobs:
   generate-pdf:
-    uses: nct-cherrypick/MarkdownToPDF/.github/workflows/GeneratePDF.yaml@main
-    with:
-      source-directory: './docs'
-      output-directory: './dist'
-      is-nest: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 💄 Install font
+        run: |
+          sudo apt install fonts-noto-cjk
+
+      - name: 🧹 Refresh output directory
+        run: |
+          shopt -s globstar
+          rm -rf ${{ env.OUTPUT_DIRECTORY }}
+          cp -R ${{ env.SOURCE_DIRECTORY }} ${{ env.OUTPUT_DIRECTORY }}
+          ls -a ${{ env.NESTED_OUTPUT_DIRECTORY }}/*
+
+      - name: 📝 Generate PDF
+        run: |
+          shopt -s globstar
+          npx md-to-pdf --config-file ./.md-pdf/config.json ${{ env.NESTED_OUTPUT_DIRECTORY }}/*.md
+
+      - name: 🗑 Remove markdown files
+        run: |
+          shopt -s globstar
+          rm -rf ${{ env.NESTED_OUTPUT_DIRECTORY }}/*.md
+
+      - name: 🚀 Push generate files to the repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          COMMIT_DATE='📝 Generate PDF: '$(date +'%Y-%m-%d %H:%M:%S')
+          echo $COMMIT_DATE
+          git commit -m "${COMMIT_DATE}"
+          git push origin HEAD:${GITHUB_REF}
