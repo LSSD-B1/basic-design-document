@@ -1,0 +1,16 @@
+name: '📝 Generate PDF from Markdown'
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - '**'
+
+jobs:
+  generate-pdf:
+    uses: nct-cherrypick/MarkdownToPDF/.github/workflows/GeneratePDF.yaml@main
+    with:
+      source-directory: '.'
+      output-directory: '.'
+      is-nest: true
