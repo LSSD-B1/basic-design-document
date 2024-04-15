@@ -3,7 +3,7 @@ name: Docs to PDF
 on:
   push:
     branches:
-      - hiroaki222
+      - main
     paths:
       - 'docs/**.md'
       - 'docs/images/**'
