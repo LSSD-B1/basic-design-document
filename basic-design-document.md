@@ -1,4 +1,7 @@
+<div style="text-align: center;">
 # 基本設計仕様書
+</div>
+
 
 <div style="page-break-before:always"></div>
 
@@ -11,6 +14,9 @@
 6. データフロー
 7. プロトコルとインターフェース
 8. テスト要件
+
+<div style="page-break-before:always"></div>
+
 # システムアーキテクチャ
 # 機能要件
 # 非機能要件
@@ -18,4 +24,4 @@
 # ユーザーインターフェース設計
 # データフロー
 # プロトコルとインターフェース
-# テスト要件 
+# テスト要件
