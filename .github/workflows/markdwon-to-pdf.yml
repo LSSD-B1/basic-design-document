@@ -5,12 +5,12 @@ on:
 
   push:
     paths:
-      - '**'
+      - 'docs/**'
 
 jobs:
   generate-pdf:
     uses: nct-cherrypick/MarkdownToPDF/.github/workflows/GeneratePDF.yaml@main
     with:
-      source-directory: '.'
-      output-directory: '.'
+      source-directory: './docs'
+      output-directory: './dist'
       is-nest: true
