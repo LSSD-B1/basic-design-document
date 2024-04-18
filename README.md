@@ -5,3 +5,5 @@
 # メモ
 - [システムアーキテクチャリンク(アクセス可能：前川)](https://drive.google.com/file/d/17qPmAPqj0ThNnVW4FqyoFK8QKDnU7azl/view?usp=sharing)
 - アクセス制限があるため、利用するときはgoogleアカウントのメールアドレスを前川に教えてください
+
+test_Yuhi_ARAKI
