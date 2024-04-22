@@ -78,4 +78,6 @@
 ![Directory](../img/DataModel_Directory.png)
 
 # 6. ユーザーインターフェース設計
-![ユーザーインターフェース設計](../img/UI_design.jpg)
+![ユーザーインターフェース設計1](../img/ui_1.png)
+![ユーザーインターフェース設計2](../img/ui_2.png)
+![ユーザーインターフェース設計3](../img/ui_3.png)
