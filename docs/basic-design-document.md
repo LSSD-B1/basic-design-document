@@ -74,5 +74,8 @@
 ## 4.5. データベース
 - データの整合性の保証
 # 5. データモデル
+![DataBase](../img/DataModel_DB.png)
+![Directory](../img/DataModel_Directory.png)
+
 # 6. ユーザーインターフェース設計
 ![ユーザーインターフェース設計](../img/UI_design.jpg)
