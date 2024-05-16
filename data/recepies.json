@@ -1,9 +1,14 @@
 {
     "0":
     {
+        "id":0,
         "name":"肉じゃが",
         "calorie":330,
-        "picture":""
+        "picture":"",
+        "plus":
+        [
+
+        ]
     },
 
     "1":
@@ -11,7 +16,11 @@
         "id":1,
         "name":"チャーハン",
         "calorie":626,
-        "picture":""
+        "picture":"",
+        "plus":
+        [
+
+        ]
     },
 
     "2":
@@ -19,6 +28,10 @@
         "id":2,
         "name":"ミートソーススパゲティ",
         "calorie":606,
-        "picture":""
+        "picture":"",
+        "plus":
+        [
+
+        ]
     }
 }
