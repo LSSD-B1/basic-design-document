@@ -3,27 +3,57 @@
     {
         "0":
         {
-            "ingredient":"",
-            "quantity":0,
-            "unit":""
+            "ingredient":"牛もも薄切り肉",
+            "quantity":120,
+            "unit":"g"
         },
         "1":
         {
-            "ingredient":"",
-            "quantity":0,
-            "unit":""
+            "ingredient":"じゃがいも",
+            "quantity":2,
+            "unit":"個"
         },
         "2":
         {
-            "ingredient":"",
-            "quantity":0,
-            "unit":""
+            "ingredient":"玉ねぎ",
+            "quantity":0.5,
+            "unit":"個"
         },
         "3":
         {
-            "ingredient":"",
-            "quantity":0,
-            "unit":""
+            "ingredient":"にんじん",
+            "quantity":60,
+            "unit":"g"
+        },
+        "4":
+        {
+            "ingredient":"しらたき",
+            "quantity":100,
+            "unit":"g"
+        },
+        "5":
+        {
+            "ingredient":"顆粒だし",
+            "quantity":4,
+            "unit":"g"
+        },
+        "6":
+        {
+            "ingredient":"しょうゆ",
+            "quantity":1,
+            "unit":"大さじ"
+        },
+        "7":
+        {
+            "ingredient":"みりん",
+            "quantity":60,
+            "unit":"小さじ"
+        },
+        "8":
+        {
+            "ingredient":"さやえんどう",
+            "quantity":4,
+            "unit":"枚"
         }
     },
 
