@@ -80,8 +80,8 @@
         "3":
         {
             "ingredient":"オリーブ油",
-            "quantity":1,
-            "unit":"小さじ"
+            "quantity":5,
+            "unit":"ml"
         },
         "4":
         {
@@ -104,8 +104,8 @@
         "7":
         {
             "ingredient":"コンソメ",
-            "quantity":1,
-            "unit":"小さじ"
+            "quantity":5,
+            "unit":"ml"
         }
     },
 
