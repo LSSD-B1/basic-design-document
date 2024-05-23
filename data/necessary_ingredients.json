@@ -40,14 +40,14 @@
         "6":
         {
             "ingredient":"しょうゆ",
-            "quantity":1,
-            "unit":"大さじ"
+            "quantity":15,
+            "unit":"ml"
         },
         "7":
         {
             "ingredient":"みりん",
             "quantity":60,
-            "unit":"小さじ"
+            "unit":"ml"
         },
         "8":
         {
@@ -68,8 +68,8 @@
         "1":
         {
             "ingredient":"牛乳",
-            "quantity":2,
-            "unit":"大さじ"
+            "quantity":30,
+            "unit":"ml"
         },
         "2":
         {
@@ -119,9 +119,9 @@
         },
         "1":
         {
-            "ingredient":"塩(豆腐の水切り用)",
-            "quantity":1,
-            "unit":"小さじ"
+            "ingredient":"塩",
+            "quantity":5,
+            "unit":"g"
         },
         "2":
         {
@@ -137,7 +137,7 @@
         },
         "4":
         {
-            "ingredient":"焼き麩(つなぎ用)",
+            "ingredient":"焼き麩",
             "quantity":10,
             "unit":"g"
         },
@@ -162,8 +162,8 @@
         "8":
         {
             "ingredient":"サラダ油",
-            "quantity":3,
-            "unit":"大さじ"
+            "quantity":45,
+            "unit":"ml"
         }
     }
 }
